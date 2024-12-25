@@ -1,0 +1,102 @@
+/* styles/History.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .history-page {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-top: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .tabs button {
+    background: #6c5ce7;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tabs button:hover {
+    background: #a29bfe;
+  }
+  
+  .tabs button.active {
+    background: #00cec9;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .chart-box {
+    background: rgba(255, 255, 255, 0.1);  /* Légèrement transparent pour un effet verre */
+    backdrop-filter: blur(10px);  /* Effet de flou pour un style 'frosted glass' */
+    border: 1px solid rgba(255, 255, 255, 0.2);  /* Bordure subtile */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);  /* Ombre plus marquée */
+    width: 48%;
+    transition: transform 0.3s ease;
+  }
+  
+  .chart-box:hover {
+    transform: translateY(-5px);  /* Légère élévation au survol */
+  }
+  
+  .chart-box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

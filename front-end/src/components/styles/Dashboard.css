@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #7b4397, #3498db);  /* Fond dégradé */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dashboard-page {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    margin-top: 40px;
+    animation: fadeIn 0.6s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+  
+  /* Conteneur pour aligner et espacer les capteurs */
+  .sensor-container {
+    display: flex;
+    justify-content: space-evenly; /* Espacement uniforme */
+    align-items: center;
+    gap: 30px;  /* Espace entre les éléments */
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  /* Style uniforme pour chaque icône et texte */
+  .sensor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px;  /* Largeur fixe pour uniformité */
+    height: 250px;
+  }
+  
+  /* Icônes des capteurs */
+  .sensor-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  /* Animation au survol */
+  .sensor-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 25px rgba(255, 255, 255, 0.4));
+  }
+  
+  /* Texte des capteurs */
+  .sensor-info h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .sensor-info p {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Responsive : Adaptation pour petits écrans */
+  @media (max-width: 768px) {
+    .sensor-container {
+      flex-direction: column;  /* Empiler en colonne */
+      gap: 40px;
+    }
+  
+    .sensor-info {
+      width: 100%;
+      height: auto;
+    }
+  
+    .sensor-icon {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .sensor-info h2 {
+      font-size: 2.5rem;
+    }
+  
+    .sensor-info p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Animation d'apparition */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

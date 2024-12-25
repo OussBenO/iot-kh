@@ -1,0 +1,100 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(145deg, rgba(106, 13, 173, 0.9), rgba(76, 0, 130, 0.9));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
+    transition: width 0.4s ease;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    overflow-y: auto;  /* Permet à la sidebar de scroller si elle est trop longue */
+  }
+  
+  .sidebar.collapsed {
+    width: 80px;
+    align-items: center;
+  }
+  
+  /* Logo et éléments de navigation */
+  .logo {
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+
+.logo img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Liste des éléments du menu */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;  /* Réduit l'espace entre le logo et les éléments de la liste */
+    width: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    width: calc(100% - 40px);
+    max-width: 240px;
+    transition: background 0.3s, transform 0.3s;
+    box-sizing: border-box;
+}
+
+.sidebar.collapsed li {
+    width: 100%;
+    justify-content: center;
+}
+
+li img {
+    width: 30px;
+    margin-right: 15px;
+    transition: margin-right 0.4s ease;
+}
+
+.sidebar.collapsed li img {
+    margin-right: 0;
+}
+
+.sidebar.collapsed ul li span {
+    display: none;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+li.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(0);
+}
